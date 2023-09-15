@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
-export default function Course({ course , handleSelectToCart}) {
+
+export default function Course({ course, handleSelectToCart }) {
     const { image, course_name, course_details, price, credit } = course;
     return (
         <div className='bg-white p-4 rounded-lg w-80 md:w-full mx-auto'>
@@ -25,7 +26,8 @@ export default function Course({ course , handleSelectToCart}) {
 
                 </div>
                 <div className='flex w-full justify-center items-center mt-4'>
-                    <button className='w-full btn px-8 py-2 rounded-lg text-white bg-blue-600' onClick={()=> handleSelectToCart(course)}>Select</button>
+                    <button className='w-full btn px-8 py-2 rounded-lg text-white bg-blue-600' onClick={() => handleSelectToCart(course)}>Select</button>
+                    
                 </div>
             </div>
         </div>
