@@ -13,11 +13,16 @@ function App() {
     const isExist = selectedCourse.find(item => item.id === course.id);
     if(isExist){
       alert("already selsected");
-    }else{      
+    }else{
+      if((usedCredits + course.credit) > 20){
+        alert("Insufficient Credits");
+      }else{
         setSelectedCourse([...selectedCourse , course]);
         setRemainingCredits(remainingCredits - course.credit);
         setUsedCredits(usedCredits + course.credit)
-        setPrice(price + course.price)      
+        setPrice(price + course.price);
+      }
+      
     }
   }
 // console.log(selectedCourse);
